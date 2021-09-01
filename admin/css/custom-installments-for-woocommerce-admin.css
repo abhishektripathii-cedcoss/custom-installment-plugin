@@ -1,0 +1,239 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+ /** Write css for admin tab */
+.mwb-btn--secondary {
+    background-color: #2196f3;
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 20px 0;
+    min-width: 150px;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.mwb-btn--secondary:hover,
+.mwb-btn--secondary:focus {
+    color: #ffffff;    
+}
+
+.mwb_settings_area {
+    border-bottom: 1px solid #c7c7c7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding: 20px 0;
+}
+
+.mwb-settings__label {
+    color: #1d201f;
+    flex: 0 0 100%;
+    font-size: 16px;
+    max-width: 25%;
+    text-transform: capitalize;
+}
+
+.mwb-settings__field {
+    flex: 0 0 100%;
+    max-width: 75%;
+}
+
+.mwb-settings__field-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.mwb-settings__field-col--left,
+.mwb-settings__field-col--right {
+    flex: 0 0 100%;
+    max-width: 50%;
+}
+
+.mwb-settings__field select {
+    margin-bottom: 15px;
+    max-width: 250px;
+    width: 100%;
+}
+
+.mwb-upl__img,
+.mwb-upload-img {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.mwb-upl__img img,
+.mwb-upload-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.mwb-settings__link-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mwb-submit__button-grp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.mwb_submit_button.mwb-submit__button-wrap {
+    flex: 0 0 100%;
+    max-width: 75%;
+}
+
+.mwb-submit__button {
+    background: #2196f3;
+    border-radius: 40px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    min-width: 170px;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* hiding after deletion msg */
+
+.mwb_submit_button {
+    display: none;
+}
+
+body.mwb-modal--open {
+    position: relative;
+    overflow: hidden;
+}
+
+body.mwb-modal--open::after {
+    background: rgba(0,0,0,0.15);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mwb-delete__msg-modal {
+    bottom: 0;
+    display: none;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99;
+}
+
+body.mwb-modal--open .mwb-delete__msg-modal {
+    display: block;
+}
+
+.mwb_delete_msg_display {
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 4px 4px 5px 0 rgba(0,0,0,0.15);
+    margin: 100px auto;
+    max-width: 380px;
+    opacity: 0;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    transform: scale(0);
+    width: 100%;
+    z-index: 100;
+}
+
+body.mwb-modal--open .mwb_delete_msg_display {
+    animation: scaleup 0.3s ease-in forwards;
+}
+
+body.mwb-modal--close .mwb_delete_msg_display {
+    animation: scaledown 0.3s ease-out backwards;
+}
+
+@keyframes scaleup {
+    0% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scaledown {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.mwb-delete__msg-icon::after {
+    background: #ffffff;
+    border-radius: 4px;
+    content: '';
+    height: 12px;
+    left: 16px;
+    position: absolute;
+    top: 23px;
+    transform: rotate(-45deg);
+    width: 4px;
+}
+
+.mwb-delete__msg-icon {
+    background: #BF8810;
+    border-radius: 50%;
+    height: 50px;
+    margin: 10px auto;
+    position: relative;
+    width: 50px;
+}
+
+.mwb-delete__msg-icon::before {
+    background: #ffffff;
+    border-radius: 4px;
+    content: '';
+    height: 24px;
+    left: 27px;
+    position: absolute;
+    top: 13px;
+    transform: rotate(45deg);
+    width: 4px;
+}
+.mwb-delete__msg-btn--close.mwb-btn--secondary {
+    margin: 10px 0;
+    padding: 8px 15px;
+}
